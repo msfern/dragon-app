@@ -14,5 +14,8 @@ export const TableBodyRow = styled.div`
 
 export const TableBodyCell = styled.div`
   width: ${props => (props.width ? `${props.width}%` : 'auto')};
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   /* font-weight: ${props => (props.isBold ? `${props.width}%` : 'auto')}; */
 `;

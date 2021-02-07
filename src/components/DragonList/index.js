@@ -2,7 +2,7 @@ import React from 'react';
 import Dragon from '../Dragon';
 import { Container, TableHeader, TableHeaderCell } from './styles';
 
-const DragonList = () => {
+const DragonList = ({ dragons }) => {
   return (
     <Container>
       <TableHeader>
@@ -13,12 +13,9 @@ const DragonList = () => {
         <TableHeaderCell width="5" />
         <TableHeaderCell width="5" />
       </TableHeader>
-      <Dragon />
-      <Dragon />
-      <Dragon />
-      <Dragon />
-      <Dragon />
-      <Dragon />
+      {dragons.map(dragon => (
+        <Dragon key={dragon.id} details={dragon} />
+      ))}
     </Container>
   );
 };
