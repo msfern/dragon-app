@@ -1,12 +1,15 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
-import Container from './styles';
+import { Link } from 'react-router-dom';
+import { ContainerLink, ContainerButton } from './styles';
 
-function Button({ children, disabled, onClick }) {
-  return (
-    <Container disabled={disabled} onClick={onClick}>
-      {children}
-    </Container>
+function Button({ children, to, isTransparent }) {
+  return to ? (
+    <ContainerLink isTransparent={isTransparent}>
+      <Link to={to}>{children}</Link>
+    </ContainerLink>
+  ) : (
+    <ContainerButton isTransparent={isTransparent}>{children}</ContainerButton>
   );
 }
 
