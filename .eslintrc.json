@@ -27,6 +27,8 @@
     "react/no-unescaped-entities": "off",
     "react/prop-types": "off",
     "react/jsx-curly-newline": "off",
+    "no-extra-boolean-cast": "off",
+    "react/jsx-curly-brace-presence": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "quotes": [
       "error",
