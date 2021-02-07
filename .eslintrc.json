@@ -29,6 +29,7 @@
     "react/jsx-curly-newline": "off",
     "no-extra-boolean-cast": "off",
     "react/jsx-curly-brace-presence": "off",
+    "no-nested-ternary": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "quotes": [
       "error",

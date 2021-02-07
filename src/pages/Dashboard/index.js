@@ -11,7 +11,10 @@ const Dashboard = () => {
       const data = await fetch(
         'http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon'
       ).then(response => response.json());
-      setDragons(data);
+      const organizedArray = data.sort((a, b) =>
+        a.name > b.name ? 1 : b.name > a.name ? -1 : 0
+      );
+      setDragons(organizedArray);
     };
 
     getDragons();
@@ -21,7 +24,7 @@ const Dashboard = () => {
     <Container>
       <Header>
         <h1>Dragons</h1>
-        <Button to={{ pathname: '/dragons/new', state: {} }}>Add Dragon</Button>
+        <Button to={{ pathname: '/dragons/new' }}>Add Dragon</Button>
       </Header>
       <DragonList dragons={dragons} />
     </Container>

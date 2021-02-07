@@ -8,12 +8,8 @@ const PrivateRoute = ({ component: RouteComponent, ...rest }) => {
   return (
     <Route
       {...rest}
-      render={routeProps =>
-        !!currentUser ? (
-          <RouteComponent {...routeProps} />
-        ) : (
-          <Redirect to={'/'} />
-        )
+      render={props =>
+        !!currentUser ? <RouteComponent {...props} /> : <Redirect to={'/'} />
       }
     />
   );
