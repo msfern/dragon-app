@@ -7,6 +7,15 @@
 ## 🚀 Demo
 https://elastic-pasteur-49eedf.netlify.app/
 
+```
+# Email
+test@test.com
+
+# Password
+123456
+
+```
+
 
 ## 📙 Overview
 
@@ -18,7 +27,7 @@ First of all, a sketch was drawn on paper, alongside the list of needs and impro
 
 After creating the project using CRA, I added a few Style Guide configs to keep the code consistent, such as ESLint, Prettier and EditorConfig.
 
-For the Frontend, I added the necessary components and pages and filled them with static information. The entire HTML and CSS (Styled Componentss in this case) code was created during this stage, while also paying attention to the UX.
+For the Authentication, I used Firebase and React's Context API. For the Frontend, I added the necessary components and pages and filled them with static information. The entire HTML and CSS (Styled Componentss in this case) code was created during this stage, while also paying attention to the UX.
 
 For the logic, I used the Fetch API to pull and update the information needed for the project, React Hooks for the entire state management, and React Router for browsing different pages.
 
