@@ -1,10 +1,19 @@
 import React, { useCallback, useContext } from 'react';
 import { withRouter, Redirect } from 'react-router-dom';
+import { useToasts } from 'react-toast-notifications';
 import authentication from '../../services/base';
 import { AuthContext } from '../../hooks/auth';
-import {} from './styles';
+import Button from '../../components/Button';
+import {
+  Container,
+  FormContainer,
+  InputBlock,
+  ButtonContainer,
+} from './styles';
 
 const SignIn = ({ history }) => {
+  const { addToast } = useToasts();
+
   const handleLogin = useCallback(
     async event => {
       event.preventDefault();
@@ -15,7 +24,10 @@ const SignIn = ({ history }) => {
           .signInWithEmailAndPassword(email.value, password.value);
         history.push('/dashboard');
       } catch (err) {
-        console.log(err);
+        addToast('Wrong Login Info!', {
+          appearance: 'error',
+          autoDismiss: true,
+        });
       }
     },
     [history]
@@ -28,20 +40,24 @@ const SignIn = ({ history }) => {
   }
 
   return (
-    <div>
+    <Container>
       <h1>Log in</h1>
-      <form onSubmit={handleLogin}>
-        <label>
-          Email
-          <input type="email" name="email" placeholder="Email" />
-        </label>
-        <label>
-          Password
-          <input type="password" name="password" placeholder="Password" />
-        </label>
-        <button type="submit">Log In</button>
-      </form>
-    </div>
+      <FormContainer>
+        <form onSubmit={handleLogin}>
+          <InputBlock>
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Email" />
+          </InputBlock>
+          <InputBlock>
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Password" />
+          </InputBlock>
+          <ButtonContainer>
+            <Button type="submit">Log In</Button>
+          </ButtonContainer>
+        </form>
+      </FormContainer>
+    </Container>
   );
 };
 
