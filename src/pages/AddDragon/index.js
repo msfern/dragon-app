@@ -19,7 +19,7 @@ const AddDragon = () => {
       type,
       createdAt: new Date(Date.now()).toJSON(),
     };
-    await fetch('http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon', {
+    await fetch('https://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json;charset=utf-8',

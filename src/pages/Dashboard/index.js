@@ -10,7 +10,7 @@ const Dashboard = () => {
   useEffect(() => {
     const getDragons = async () => {
       const data = await fetch(
-        'http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon'
+        'https://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon'
       ).then(response => response.json());
       const organizedArray = data.sort((a, b) =>
         a.name.toLowerCase() > b.name.toLowerCase()
@@ -26,7 +26,7 @@ const Dashboard = () => {
 
   const removeDragon = async id => {
     await fetch(
-      `http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon/${id}`,
+      `https://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon/${id}`,
       {
         method: 'DELETE',
       }
