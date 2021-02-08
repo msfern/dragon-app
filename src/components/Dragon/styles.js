@@ -10,6 +10,10 @@ export const TableBodyRow = styled.div`
   margin-bottom: 20px;
   display: flex;
   justify-content: flex-start;
+
+  @media (max-width: 940px) {
+    width: 665px;
+  }
 `;
 
 export const TableBodyCell = styled.div`

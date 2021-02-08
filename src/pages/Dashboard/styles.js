@@ -13,4 +13,14 @@ export const Header = styled.header`
   padding-bottom: 30px;
   margin-bottom: 30px;
   align-items: center;
+
+  @media (max-width: 940px) {
+    flex-direction: column;
+    flex-direction: column;
+    align-items: flex-start;
+
+    h1 {
+      margin-bottom: 10px;
+    }
+  }
 `;

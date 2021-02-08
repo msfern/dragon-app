@@ -9,18 +9,10 @@ export default createGlobalStyle`
     outline: 0;
   }
 
-  html, body, #root {
-    height: 100%;
-  }
-
   body{
     background: #F6F7F8;
     color: #343434;
     -webkit-font-smoothing: antialiased;
-  }
-
-  #root {
-    position: relative;
   }
 
   body, input, button {
